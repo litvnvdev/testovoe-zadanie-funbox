@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Open+Sans:wght@300;400;500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+.wrapper {
+  background: url('../img/bg.png');
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  flex: 1 1 auto;
+}
+.card {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.card__row {
+  display: flex;
+  flex-direction: column;
+}
+.card__body {
+}
+.card__subtitle {
+  font-family: 'Exo 2', sans-serif;
+  color: #7e7e7e;
+  font-weight: 300;
+  font-size: 14px;
+}
+.card__title {
+  line-height: 0.5;
+  font-size: 32px;
+}
+.flavour {
+  line-height: 1;
+  font-size: 28px;
+}
+.card__description {
+  color: #7e7e7e;
+  font-size: 18px;
+  font-weight: 400;
+}
