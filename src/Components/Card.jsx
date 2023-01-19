@@ -3,15 +3,34 @@ import imgCat from '../img/cat.png';
 import '../css/Card.css';
 
 const Card = ({ title, weight, portion, mouse }) => {
-  const [selectBorderCard, setSeclectBorderCard] = useState('not-active');
+  const [selectBorderCard, setSelectBorderCard] = useState('not-active');
+  const [selectDotCard, setSelectDotCard] = useState('blue');
 
-  const colorOfBorderCard = () => {
-    setSeclectBorderCard('active');
+  const colorOfActiveCard = () => {
+    {
+      /*Select Border Card color*/
+    }
+    if (selectBorderCard === 'not-active') {
+      setSelectBorderCard('active');
+    } else if (selectBorderCard === 'active') {
+      setSelectBorderCard('not-active');
+    }
+
+    {
+      /*Select dot color*/
+    }
+
+    if (selectDotCard === 'blue') {
+      setSelectDotCard('pink');
+    } else if (selectDotCard === 'pink') {
+      setSelectDotCard('blue');
+    }
   };
+
   return (
     <div className="wrapper">
       <div className="content">
-        <div className={`card ${selectBorderCard}`} onClick={colorOfBorderCard}>
+        <div className={`card ${selectBorderCard}`} onClick={colorOfActiveCard}>
           <div className="container">
             <div className="card__row">
               <div className="card__body">
@@ -29,7 +48,7 @@ const Card = ({ title, weight, portion, mouse }) => {
                   </p>
                 </div>
               </div>
-              <span className={`dot ${selectBorderCard}`}>
+              <span className={`dot ${selectDotCard}`}>
                 {' '}
                 <p className="dot-text">
                   {weight} <br />

@@ -24,7 +24,7 @@
   transition: 0.5s;
 }
 .card:hover {
-  border: 4px solid red;
+  border: 4px solid rgb(212, 102, 102);
   cursor: pointer;
 }
 
@@ -88,8 +88,8 @@
 }
 .card:hover .dot {
   cursor: pointer;
-  background: red;
-  border: 4px solid red;
+  background: rgb(212, 102, 102);
+  border: 4px solid rgb(212, 102, 102);
 }
 .dot-text {
   line-height: 0.8;
@@ -113,10 +113,22 @@
   padding-bottom: 20px;
 }
 
+/*Dynamic styles for card and dot*/
+
+/*Card*/
 .not-active {
   border: 4px solid #1698d9;
 }
 .active {
+  border: 4px solid rgb(212, 102, 102);
+}
+/*Dot*/
+.blue {
+  background: #1698d9;
+  border: 4px solid #1698d9;
+}
+.pink {
+  background: rgb(212, 102, 102);
   border: 4px solid rgb(212, 102, 102);
 }
 /* @media screen and (min-width: 1200px) {
