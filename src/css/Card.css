@@ -14,14 +14,20 @@
 } */
 .card {
   z-index: 1;
-  height: 90vh;
+  height: 600px;
   overflow: hidden;
   margin-top: 20px;
   background: #fff;
   border-radius: 0px 10px 10px 10px;
   border: 4px solid #1698d9;
   position: relative;
+  transition: 0.5s;
 }
+.card:hover {
+  border: 4px solid red;
+  cursor: pointer;
+}
+
 /* .card::before {
   content: '';
   background-image: url('../img/bg.png');
@@ -45,25 +51,32 @@
   
 } */
 .card__subtitle {
+  margin-left: 50px;
+  text-align: start;
   font-family: 'Exo 2', sans-serif;
   color: #7e7e7e;
-  font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
 }
 .card__title {
+  margin-left: 50px;
+  text-align: start;
   line-height: 0.5;
   font-size: 32px;
 }
 .flavour {
-  line-height: 1;
-  font-size: 28px;
+  text-align: start;
+  font-weight: 600;
+  font-size: 32px;
 }
 .card__description {
+  margin-left: 50px;
+  text-align: start;
   color: #7e7e7e;
   font-size: 18px;
   font-weight: 400;
 }
 .dot {
+  transition: 0.5s;
   z-index: 2;
   width: 100px;
   height: 100px;
@@ -72,6 +85,11 @@
   top: 200px;
   left: 260px;
   background-color: #1698d9;
+}
+.card:hover .dot {
+  cursor: pointer;
+  background: red;
+  border: 4px solid red;
 }
 .dot-text {
   line-height: 0.8;
@@ -95,6 +113,12 @@
   padding-bottom: 20px;
 }
 
+.not-active {
+  border: 4px solid #1698d9;
+}
+.active {
+  border: 4px solid rgb(212, 102, 102);
+}
 /* @media screen and (min-width: 1200px) {
   .card__row {
   }

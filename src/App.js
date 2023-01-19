@@ -1,3 +1,4 @@
+import { click } from '@testing-library/user-event/dist/click';
 import { useMemo } from 'react';
 import './App.css';
 import Card from './Components/Card';
@@ -41,7 +42,12 @@ function App() {
         {cardData.map(({ title, weight, id, portion, mouse, description }) => (
           <div key={id}>
             <Card title={title} weight={weight} id={id} portion={portion} mouse={mouse} />
-            <p className="call-to-action-text">{description}</p>
+            <p className="call-to-action-text">
+              {description}{' '}
+              <a href="#" target="_blank" rel="noreferrer">
+                купи.
+              </a>
+            </p>
           </div>
         ))}
       </div>

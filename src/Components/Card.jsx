@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imgCat from '../img/cat.png';
 import '../css/Card.css';
 
 const Card = ({ title, weight, portion, mouse }) => {
+  const [selectBorderCard, setSeclectBorderCard] = useState('not-active');
+
+  const colorOfBorderCard = () => {
+    setSeclectBorderCard('active');
+  };
   return (
     <div className="wrapper">
       <div className="content">
-        <div className="card">
+        <div className={`card ${selectBorderCard}`} onClick={colorOfBorderCard}>
           <div className="container">
             <div className="card__row">
               <div className="card__body">
                 <div className="card__subtitle">
-                  <h2>Сказочное заморское яство</h2>
+                  <h3>Сказочное заморское яство</h3>
                 </div>
                 <div className="card__title">
                   <h1>
@@ -24,7 +29,7 @@ const Card = ({ title, weight, portion, mouse }) => {
                   </p>
                 </div>
               </div>
-              <span className="dot">
+              <span className={`dot ${selectBorderCard}`}>
                 {' '}
                 <p className="dot-text">
                   {weight} <br />
@@ -38,11 +43,6 @@ const Card = ({ title, weight, portion, mouse }) => {
           </div>
         </div>
       </div>
-      {/* <p className="call-to-action-text">
-        <a href="#" target="_blank" rel="noreferrer">
-          купи.
-        </a>
-      </p> */}
     </div>
   );
 };
