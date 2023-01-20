@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Open+Sans:wght@300;400;500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
+a {
+  text-decoration: underline;
+  color: #1698d9;
+}
 .wrapper {
-  background: url('../img/bg.png');
-  min-height: 100vh;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -14,7 +17,7 @@
 } */
 .card {
   z-index: 1;
-  height: 600px;
+  height: 550px;
   overflow: hidden;
   margin-top: 20px;
   background: #fff;
@@ -24,7 +27,7 @@
   transition: 0.5s;
 }
 .card:hover {
-  border: 4px solid rgb(212, 102, 102);
+  border: 4px solid #d91667;
   cursor: pointer;
 }
 
@@ -47,21 +50,20 @@
   display: flex;
   flex-direction: column;
 }
-/* .card__body {
-  
-} */
-.card__subtitle {
+
+.card__subtitle h3 {
   margin-left: 50px;
   text-align: start;
   font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
   color: #7e7e7e;
-  font-size: 16px;
+  font-size: 18px;
 }
-.card__title {
+.card__title h1 {
   margin-left: 50px;
   text-align: start;
-  line-height: 0.5;
-  font-size: 32px;
+  line-height: 0.4;
+  font-size: 58px;
 }
 .flavour {
   text-align: start;
@@ -82,54 +84,52 @@
   height: 100px;
   border-radius: 50%;
   position: relative;
-  top: 200px;
-  left: 260px;
+  top: 180px;
+  left: 240px;
   background-color: #1698d9;
 }
 .card:hover .dot {
   cursor: pointer;
-  background: rgb(212, 102, 102);
-  border: 4px solid rgb(212, 102, 102);
+  background: #d91667;
+  border: 4px solid #d91667;
 }
 .dot-text {
-  line-height: 0.8;
-  font-size: 36px;
-  text-align: center;
+  position: relative;
+  bottom: 30px;
+  line-height: 0.7;
+  font-size: 50px;
   color: #fff;
 }
 .dot-text span {
-  font-size: 24px;
+  font-size: 28px;
 }
 .card__image {
   z-index: 0;
   position: relative;
-  bottom: 60px;
+  bottom: 75px;
   right: 25px;
 }
-.call-to-action-text {
-  color: #fff;
-  line-height: 0.2;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
 
-/*Dynamic styles for card and dot*/
+/*===============Dynamic styles for card and dot===========*/
 
 /*Card*/
 .not-active {
   border: 4px solid #1698d9;
 }
 .active {
-  border: 4px solid rgb(212, 102, 102);
+  border: 4px solid #d91667;
 }
-/*Dot*/
+.disabled {
+  opacity: 0.5;
+}
+/*====Dot====*/
 .blue {
   background: #1698d9;
   border: 4px solid #1698d9;
 }
 .pink {
-  background: rgb(212, 102, 102);
-  border: 4px solid rgb(212, 102, 102);
+  background: #d91667;
+  border: 4px solid #d91667;
 }
 /* @media screen and (min-width: 1200px) {
   .card__row {

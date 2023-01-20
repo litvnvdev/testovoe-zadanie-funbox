@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import imgCat from '../img/cat.png';
 import '../css/Card.css';
 
-const Card = ({ title, weight, portion, mouse }) => {
+const Card = ({ title, weight, portion, mouse, opacity, border, backgroundColor }) => {
   const [selectBorderCard, setSelectBorderCard] = useState('not-active');
   const [selectDotCard, setSelectDotCard] = useState('blue');
 
@@ -25,12 +25,19 @@ const Card = ({ title, weight, portion, mouse }) => {
     } else if (selectDotCard === 'pink') {
       setSelectDotCard('blue');
     }
+
+    {
+      /*Select card disabled or not*/
+    }
   };
 
   return (
     <div className="wrapper">
       <div className="content">
-        <div className={`card ${selectBorderCard}`} onClick={colorOfActiveCard}>
+        <div
+          className={`card ${selectBorderCard}`}
+          style={{ opacity, border }}
+          onClick={colorOfActiveCard}>
           <div className="container">
             <div className="card__row">
               <div className="card__body">
@@ -48,7 +55,7 @@ const Card = ({ title, weight, portion, mouse }) => {
                   </p>
                 </div>
               </div>
-              <span className={`dot ${selectDotCard}`}>
+              <span className={`dot ${selectDotCard}`} style={{ backgroundColor, border }}>
                 {' '}
                 <p className="dot-text">
                   {weight} <br />

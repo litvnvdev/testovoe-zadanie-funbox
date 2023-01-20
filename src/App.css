@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Open+Sans:wght@300;400;500;600&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
-.App {
+body {
   background: url('./img/bg.png');
+}
+.App {
   text-align: center;
 }
 
@@ -25,4 +27,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+p.call-to-action-text {
+  font-size: 18px;
+  color: #fff;
+  line-height: 0.2;
+  margin-bottom: 30px;
+  margin-top: 5px;
 }
