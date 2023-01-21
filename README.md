@@ -2,69 +2,76 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Q1 Расскажите, чем, на ваш взгляд, отличается хорошая верстка от плохой с точки зрения:
+* пользователя; 
+* менеджера проекта; 
+* дизайнера; 
+* верстальщика; 
+* клиентского программиста; 
+* серверного программиста.
 
-In the project directory, you can run:
+### Ответ: 
+с точки зрения пользователя: при хорошей вёрстке пользователь понимает как взаимодействовать с тем или иным элементом и как правило использует его правильно. Следовательно, вёрстка должна быть понятна  и интуитивно подталкивать пользователя на правильные действия.
+с точки зрения менеджера проекта: при хорошей вёрстке менеджер проекта может с лёгкостью интегрировать новые элементы или компоненты по просьбе заказчика. То есть хорошая вёрстка должна обладать гибкостью.
+с точки зрения дизайнера:  дизайнер как и менеджер проекта под хорошей версткой подразумевает адаптивность и гибкость, чтобы как можно быстрее внедрять какие-либо изменения во внешний вид. 
+с точки зрения верстальщика: хорошая вёрстка для верстальщика это когда используется технология BEM и есть какие-либо css препроцессоры  (scss,sass, less). Также хорошей практикой будет использование DRY (don’t repeat yourself).
+с точки зрения клиентского программиста: хорошая вёрстка для программиста – это та вёрстка, которая хорошо оптимизирована для браузера, например, уменьшены вес картинок без потери качества, нет перегрузки шрифтами и другими громоздкими элементами, которые сильно замедляют работу сайта в браузере. 
+с точки зрения серверного программиста: не сталкивался с серверным программированием, но могу предположить, что хорошая вёрстка для серверного программиста – это та, в которой код разбит на модули по принципу MVC (Model Viewer Controller).
 
-### `npm start`
+## Опишите основные особенности верстки крупных многостраничных сайтов, дизайн которых может меняться в процессе реализации и поддержки.
+## Расскажите о своем опыте верстки подобных сайтов: какие методологии, инструменты и технологии вы применяли на практике.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Ответ:  
+основные особенности крупных многостраничных сайтов с динамичным дизайном заключаются в том, чтобы минимизировать повторения кода, то есть использовать принцип DRY и технологию BEM, писать комментарии к коду, чтобы могли пользоваться этим кодом, не только вы, объявлять понятные по смыслу переменные, использовать семантическую вёрстку, то есть использовать не только блоки div, но ещё header, main, article т.д.
+Чаще всего когда верстаю будь то большие проекты или даже маленький сайт, приложение,  то использую технологию BEM. Поскольку BEM позволяет брать и переиспользовать части кода различных местах сайта. Также незаменимым помощником становится препроцессор Sass в синтаксисе SCSS, где ты можешь отдельно объявить переменные и использовать их в различных SCSS файлах, что также положительно влияет на читабельность кода. Ещё надо сказать, что необходимо комментировать код, это не только повысит читабельность кода, но и упростит задачу в изменении функционала сайта, верстке или стилистике. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Q3 Опишите основные особенности верстки сайтов, которые должны одинаково хорошо отображаться как на любом современном компьютере, так и на смартфонах и планшетах под управлением iOS и Android. 
+## Расскажите о своем опыте верстки подобных сайтов: какие инструменты и технологии вы применяли, как проверяли результат на различных устройствах, какие именно устройства требовалось поддерживать.
 
-### `npm test`
+### Ответ: 
+при верстке сайта необходимо учитывать то, как он будет отображаться не только на компьютере, но и на других устройствах. Поэтому есть различные подходы к верстке сайтов для различных устройств: pixel perfect, responsive и adaptive. Так же возможно объединение подходов responsive + adaptive и называется она отзывчивой версткой. 
+При любой верстке, я всегда стараюсь адаптировать сайт под различное устройство, чаще всего использую адаптивный подход.  Для проверки то как выглядит сайт или приложение, я использую Google Chrome Developer Tools, там есть такой инструмент как device toolbar, который существенно упрощает верстку адаптивного дизайна. Также я стараюсь всегда использовать flex-box, что значительно облегчает адаптацию под средние и маленькие дисплеи.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Q4 Расскажите, какие инструменты помогают вам экономить время в процессе написания, проверки и отладки кода.
 
-### `npm run build`
+### Ответ: 
+Для быстро написания кода я использую различные дополнения в Visual Studio Code, которые предлагают сниппеты кода и целом структурируют мой код. Для проверки и отладки кода использую prettier и eslint, незаменимые помощники в проверки кода, особенно если пишешь на JavaScript. Prettier также можно настроить под язык на котором ты пишешь, что существенно упрощает процесс написания и проверки кода. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Q5 Вам нужно понять, почему страница отображается некорректно в Safari на iOS и в IE на Windows. Код писали не вы, доступа к исходникам у вас нет. Ваши действия?
+Сталкивались ли вы с подобными проблемами на практике?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Ответ: 
+Сталкивался с такими проблемами, и зачастую проблема заключается в css файле. В таком случае я просматриваю и анализирую код CSS и HTML, смотрю какой элемент, компонент не правильно отображается, затем захожу на caniuse.com или же гуглю поддержку того или иного свойства браузерами, и смотрю что поддерживается,  а что нет и как это можно исправить, если не поддерживается, то ищу другое решение для того или иного браузера.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Q6 Дизайнер отдал вам макет, в котором не показано, как должны выглядеть интерактивные элементы при наведении мыши. Ваши действия?
 
-### `npm run eject`
+### Ответ: 
+Всё зависит от тематики сайта и дизайна, изучив дизайн макета определю основные его цвета. Уже от этих цветов буду отталкиваться, также добавлю плавность при наведении.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Q7 Какие ресурсы вы используете для развития в профессиональной сфере? 
+Приведите несколько конкретных примеров (сайты, блоги и так далее).
+## Какое направление развития вам более близко: JS-программирование, HTML/CSS- верстка или что-то ещё?
+## Какие ещё области знаний, кроме тех, что непосредственно относятся к работе, вам интересны?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Ответ: 
+У меня много любимых ресурсов, я их просто перечислю ниже: 
+* stackoverflow 
+* css trick 
+* codepen 
+* hackerank
+* codewars
+Направление к которому я стремлюсь это - fullstack разработчик. 
+Время от времени занимаюсь монтажом видео, обработкой фотографий не профессионально, а как хобби.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Q8 Расскажите нам о себе и предоставьте несколько ссылок на последние работы, выполненные вами.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Ответ:
+Меня зовут Максим, мне очень нравится изучать что-то и учиться новому в IT сфере. Будь то библиотека или фреймворк. 
+Также мне нравится когда поставлены конкретные задачи и дедлайны к ним. Благодаря этому я могу составить план наиболее продуктивного тайменеджмента.  
+Вот несколько примеров моих работ: 
+[https://maximlitvinov.me] (https://maximlitvinov.me) – мой личный сайт
+ [https://unicornwitnesses.com/] (https://unicornwitnesses.com/) - сайт стартап-проекта над которым работал
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
